@@ -147,10 +147,10 @@ st.markdown(
 st.write("")
 
 # ---- KPI calculations (uses df_for_kpis so gender filter doesn't break these) ----
-latest_year = df_for_kpis.Year.max()
+latest_year = df.Year.max()
 prev_year = latest_year - 1
-latest = df_for_kpis[df_for_kpis.Year == latest_year]
-prev = df_for_kpis[df_for_kpis.Year == prev_year]
+latest = df[df.Year == latest_year]
+prev = df[df.Year == prev_year]
 
 total_wealth = latest["NetWorth_USD_B"].sum() / 1000
 prev_wealth = prev["NetWorth_USD_B"].sum() / 1000
@@ -162,9 +162,14 @@ count_change = total_count - prev_count
 
 richest = latest.nlargest(1, "NetWorth_USD_B").iloc[0]
 
-pct_women = (latest.Gender == "Female").sum() / latest.Gender.notna().sum() * 100 if latest.Gender.notna().sum() else 0
-prev_women_denom = prev.Gender.notna().sum()
-prev_pct_women = (prev.Gender == "Female").sum() / prev_women_denom * 100 if prev_women_denom else 0
+# Women's-share KPI stays gender-filter-blind on purpose:
+# a % breakdown is meaningless if the sidebar already filtered to one gender.
+latest_for_gender = df_for_kpis[df_for_kpis.Year == latest_year]
+prev_for_gender = df_for_kpis[df_for_kpis.Year == prev_year]
+
+pct_women = (latest_for_gender.Gender == "Female").sum() / latest_for_gender.Gender.notna().sum() * 100 if latest_for_gender.Gender.notna().sum() else 0
+prev_women_denom = prev_for_gender.Gender.notna().sum()
+prev_pct_women = (prev_for_gender.Gender == "Female").sum() / prev_women_denom * 100 if prev_women_denom else 0
 pct_women_change = pct_women - prev_pct_women if prev_women_denom else None
 
 def kpi_card(label, value, delta=None, positive=True):

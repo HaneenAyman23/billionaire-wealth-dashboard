@@ -67,4 +67,4 @@ billionaire-wealth-dashboard/
 
 ---
 
-Built by **Haneen Ayman**
+Built by **Haneen Ayman**  **[LinkedIn Account](www.linkedin.com/in/haneen-ayman-240051387)**  **[E-mail](haneenayman23@outlook.com)**

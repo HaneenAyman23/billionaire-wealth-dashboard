@@ -52,12 +52,16 @@ streamlit run app.py
 
 ```
 billionaire-wealth-dashboard/
-├── app.py                       # Main Streamlit app
-├── requirements.txt             # Python dependencies
 ├── .streamlit/
 │   └── config.toml       # Theme configuration
+├── assets/
+│   └── Billionaire-Wealth-Analytics-·-Streamlit.mp4      #walkthrough demo
 ├── data/
 │   └── billionaires_clean.csv   # Cleaned, reshaped dataset (2001–2026)
+├── .gitignore
+├── app.py                       # Main Streamlit app
+├── requirements.txt             # Python dependencies
+├── LICENSE
 └── README.md
 ```
 

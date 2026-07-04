@@ -52,7 +52,8 @@ streamlit run app.py
 billionaire-wealth-dashboard/
 ├── app.py                       # Main Streamlit app
 ├── requirements.txt             # Python dependencies
-├── .streamlit/config.toml       # Theme configuration
+├── .streamlit/
+│   └── config.toml       # Theme configuration
 ├── data/
 │   └── billionaires_clean.csv   # Cleaned, reshaped dataset (2001–2026)
 └── README.md

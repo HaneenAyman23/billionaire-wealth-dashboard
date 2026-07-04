@@ -55,7 +55,8 @@ billionaire-wealth-dashboard/
 ├── .streamlit/
 │   └── config.toml       # Theme configuration
 ├── assets/
-│   └── Billionaire-Wealth-Analytics-·-Streamlit.mp4      #walkthrough demo
+│   ├── Dashboard.png     # preview 
+│   └── Billionaire-Wealth-Analytics-·-Streamlit.mp4      # Walkthrough demo
 ├── data/
 │   └── billionaires_clean.csv   # Cleaned, reshaped dataset (2001–2026)
 ├── .gitignore

@@ -2,7 +2,7 @@
 
 An interactive dashboard analyzing 25 years (2001–2026) of Forbes World's Billionaires data — built end-to-end with Python, Pandas, and Streamlit, including a live snapshot capturing the moment history's first trillionaire emerged.
 
-**[🔗 View Live Dashboard](your-streamlit-link-goes-here-after-deployment)**
+**[🔗 View Live Dashboard](https://billionaire-wealth-dashboard.streamlit.app/)**
 
 ---
 
